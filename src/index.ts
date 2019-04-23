@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 
-import { Response } from './types';
+import { Response, QueryString } from './types';
 
 export enum AcceptedCountTypes {
   Normal = 'Normal',
@@ -18,8 +18,10 @@ export class AtCoderAPI {
   }
 
   // TODO: add query string
-  private async callGet<T>(path: string): Promise<T> {
-    const res = await this.axiosInstance.get<T>(path);
+  private async callGet<T>(path: string, params?: QueryString): Promise<T> {
+    const res = await this.axiosInstance.get<T>(path, {
+      params
+    });
     return res.data;
   }
 
@@ -48,6 +50,18 @@ export class AtCoderAPI {
 
   public ratedPointSums(): Promise<Response.RatedPointSums> {
     return this.callGet('/resources/sums.json');
+  }
+
+  public acceptedCountsEachLanguage(): Promise<Response.AcceptedCountsEachLanguage> {
+    return this.callGet('/resources/lang.json');
+  }
+
+  public userInfo(user: string): Promise<Response.UserInfo> {
+    return this.callGet('/atcoder-api/v2/user_info', { user });
+  }
+
+  public submissions(user: string): Promise<Response.Submissions> {
+    return this.callGet('/atcoder-api/results', { user });
   }
 }
 

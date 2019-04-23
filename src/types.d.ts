@@ -50,4 +50,35 @@ export declare namespace Response {
     point_sum: number;
   }
   export type RatedPointSums = RatedPointSum[];
+
+  export interface AcceptedCountEachLanguage {
+    user_id: string;
+    count: number;
+    language: string;
+  }
+  export type AcceptedCountsEachLanguage = AcceptedCountEachLanguage[];
+
+  export interface UserInfo {
+    user_id: string;
+    accepted_count: number;
+    accepted_count_rank: number;
+    rated_point_sum: number;
+    rated_point_sum_rank: number;
+  }
+
+  export interface Submission {
+    id: number;
+    epoch_second: number;
+    problem_id: string;
+    contest_id: string;
+    user_id: string;
+    language: string;
+    point: number;
+    length: number;
+    result: string;
+    execution_time: number;
+  }
+  export type Submissions = Submission[];
 }
+
+export type QueryString = { [key: string]: string | string[] };
