@@ -38,4 +38,16 @@ export declare namespace Response {
     solver_count: number;
   }
   export type MergedProblems = MergedProblem[];
+
+  export interface AcceptedCount {
+    user_id: string;
+    problem_count: number;
+  }
+  export type AcceptedCounts = AcceptedCount[];
+
+  export interface RatedPointSum {
+    user_id: string;
+    point_sum: number;
+  }
+  export type RatedPointSums = RatedPointSum[];
 }
