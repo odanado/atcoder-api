@@ -1,6 +1,6 @@
 {
   "name": "@odanado/atcoder-api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "AtCoder Problems client for JavaScript/TypeScript",
   "main": "lib/index.js",
   "module": "module/index.js",
@@ -27,5 +27,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
