@@ -4,8 +4,12 @@
   "description": "AtCoder Problems client for JavaScript/TypeScript",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "odanado",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.4.4"
+  }
 }
