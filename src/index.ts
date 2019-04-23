@@ -1,19 +1,19 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosInstance } from 'axios';
 
-import { Response } from "./types";
+import { Response } from './types';
 
 export enum AcceptedCountTypes {
-  Normal = "Normal",
-  Shortest = "Shortest",
-  Fastest = "Fastest",
-  First = "First"
+  Normal = 'Normal',
+  Shortest = 'Shortest',
+  Fastest = 'Fastest',
+  First = 'First'
 }
 
 export class AtCoderAPI {
   private axiosInstance: AxiosInstance;
   constructor() {
     this.axiosInstance = axios.create({
-      baseURL: "https://kenkoooo.com/atcoder"
+      baseURL: 'https://kenkoooo.com/atcoder'
     });
   }
 
@@ -24,30 +24,30 @@ export class AtCoderAPI {
   }
 
   public contests(): Promise<Response.Contests> {
-    return this.callGet("/resources/contests.json");
+    return this.callGet('/resources/contests.json');
   }
   public problems(): Promise<Response.Problems> {
-    return this.callGet("/resources/problems.json");
+    return this.callGet('/resources/problems.json');
   }
   public mergedProblems(): Promise<Response.MergedProblems> {
-    return this.callGet("/resources/merged-problems.json");
+    return this.callGet('/resources/merged-problems.json');
   }
 
   public acceptedCounts(type: AcceptedCountTypes): Promise<Response.AcceptedCounts> {
     switch (type) {
       case AcceptedCountTypes.Normal:
-        return this.callGet("/resources/ac.json");
+        return this.callGet('/resources/ac.json');
       case AcceptedCountTypes.Shortest:
-        return this.callGet("/resources/short.json");
+        return this.callGet('/resources/short.json');
       case AcceptedCountTypes.Fastest:
-        return this.callGet("/resources/fast.json");
+        return this.callGet('/resources/fast.json');
       case AcceptedCountTypes.First:
-        return this.callGet("/resources/first.json");
+        return this.callGet('/resources/first.json');
     }
   }
 
   public ratedPointSums(): Promise<Response.RatedPointSums> {
-    return this.callGet("/resources/sums.json");
+    return this.callGet('/resources/sums.json');
   }
 }
 
