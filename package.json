@@ -1,0 +1,11 @@
+{
+  "name": "@odanado/atcoder-api",
+  "version": "0.0.0",
+  "description": "AtCoder Problems client for JavaScript/TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "odanado",
+  "license": "MIT"
+}
