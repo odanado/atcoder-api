@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2018",
     "module": "commonjs",
     "lib": [
-      "es2015"
+      "es2018"
     ],
     "moduleResolution": "node",
     "declaration": true,
@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "alwaysStrict": true,
     "pretty": true,
-    "outDir": "./dist"
+    "outDir": "./lib"
   },
   "include": [
     "src/**/*.ts"

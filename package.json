@@ -2,9 +2,13 @@
   "name": "@odanado/atcoder-api",
   "version": "0.0.0",
   "description": "AtCoder Problems client for JavaScript/TypeScript",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "module/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "run-p build:*",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -p tsconfig.module.json",
     "test": "run-p test:*",
     "test:build": "tsc --noEmit",
     "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore ."

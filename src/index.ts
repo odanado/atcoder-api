@@ -2,6 +2,8 @@ import axios, { AxiosInstance } from 'axios';
 
 import { Response, QueryString } from './types';
 
+export { Response };
+
 export enum AcceptedCountTypes {
   Normal = 'Normal',
   Shortest = 'Shortest',
@@ -17,7 +19,6 @@ export class AtCoderAPI {
     });
   }
 
-  // TODO: add query string
   private async callGet<T>(path: string, params?: QueryString): Promise<T> {
     const res = await this.axiosInstance.get<T>(path, {
       params
@@ -64,10 +65,3 @@ export class AtCoderAPI {
     return this.callGet('/atcoder-api/results', { user });
   }
 }
-
-async function main() {
-  // const client = new AtCoderAPI()
-  // console.log((await client.mergedProblems())[0])
-}
-
-main();
