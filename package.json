@@ -2,6 +2,10 @@
   "name": "@odanado/atcoder-api",
   "version": "0.0.1",
   "description": "AtCoder Problems client for JavaScript/TypeScript",
+  "files": [
+    "lib",
+    "module"
+  ],
   "main": "lib/index.js",
   "module": "module/index.js",
   "types": "lib/index.d.ts",
