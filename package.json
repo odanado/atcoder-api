@@ -1,6 +1,6 @@
 {
   "name": "@odanado/atcoder-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AtCoder Problems client for JavaScript/TypeScript",
   "files": [
     "lib",
