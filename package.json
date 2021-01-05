@@ -30,7 +30,7 @@
     "typescript": "^3.4.4"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.21.1"
   },
   "publishConfig": {
     "access": "public"
